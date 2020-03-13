@@ -20,4 +20,9 @@ public class AddIfMaxCommand extends Command{
                 addIfMax(helper.
                         scanDragon("дракона которого надо добавить если он минимальный"));
     }
+
+    @Override
+    public String getDescription() {
+        return "добавить новый элемент в коллекцию, если его значение превышает значение наибольшего элемента этой коллекции";
+    }
 }

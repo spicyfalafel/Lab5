@@ -19,7 +19,6 @@ public class InputHelper {
         System.out.println("введите " + cheVvodit);
         return sc.nextLine().trim();
     }
-
     // ПРИВАТНЫЙ ДЛЯ НЕПУСТОЙ ЛИНИИ
     private  String scanNotEmptyLine(String cheVvodit){
         String res = scanLine(cheVvodit);
@@ -40,133 +39,71 @@ public class InputHelper {
         return str;
     }
 
-    /*
-            ДА ТУТ МНОГО ПОЧТИ ОДИНАКОВЫХ МЕТОДОВ ДЛЯ ENUM'ОВ.
-            задача:
-                проверить правильность ввода значения Enum'а-аргумента
-            как ее решить я не знаю.
-     */
-
-    // TODO CHECK
-    // для характера дракона
-    public DragonCharacter scanCharacterNotNull(String cheVvodit){
-        System.out.println("Доступные значения DragonCharacter: ");
-        for(DragonCharacter t : DragonCharacter.values()){
-            System.out.println(t + " ");
-        }
-        while(true){
-            String str = scanNotEmptyLine(cheVvodit);
-            try{
-                return DragonCharacter.valueOf(str);
-            }catch(IllegalArgumentException|NullPointerException e){
-                System.out.println("введите нормально плиз");
-            }
-        }
-    }
-    // для типа дракона
-    public DragonType scanDragonTypeCanBeNull(String cheVvodit){
-        System.out.println("Доступные значения DragonCharacter: ");
-        for(DragonType t : DragonType.values()){
-            System.out.println(t + " ");
-        }
-        while(true){
-            String str = scanLine(cheVvodit);
-            try{
-                if(str.equals("")) return null;
-                return DragonType.valueOf(str);
-            }catch(NullPointerException|IllegalArgumentException e){
-                System.out.println("введите нормально плиз");
-            }
-        }
-    }
-    public Color scanColor(String cheVvodit){
-        System.out.println("Доступные значения Color: ");
-        for(Color t : Color.values()){
-            System.out.println(t + " ");
-        }
-        while(true){
-            String str = scanLine(cheVvodit);
-            try{
-                if(str.equals("")) return null;
-                return Color.valueOf(str);
-            }catch(IllegalArgumentException|NullPointerException e){
-                System.out.println("введите нормально плиз");
-            }
-        }
-    }
-    public Country scanCountry(String cheVvodit){
-        System.out.println("Доступные значения Country: ");
-        for(Country t : Country.values()){
-            System.out.println(t + " ");
-        }
-        while(true){
-            String str = scanLine(cheVvodit);
-            try{
-                if(str.equals("")) return null;
-                return Country.valueOf(str);
-            }catch(IllegalArgumentException|NullPointerException e){
-                System.out.println("введите нормально плиз");
-            }
-        }
-    }
-
-
-
-
-
-    public int scanInteger(String cheVvodit){
+    public Enum<?> scanEnum(String cheVvodit, boolean canBeNull, Class<? extends Enum> enumType){
         while(true) {
-            String res = scanNotEmptyLine(cheVvodit);
+            String str = scanLine(cheVvodit);
+            try {
+                if (str.equals("") && canBeNull) return null;
+                else if (str.equals("")){
+                    throw new NullPointerException();
+                }
+                return Enum.valueOf(enumType, str);
+            } catch (IllegalArgumentException | NullPointerException e) {
+                System.out.println("введите нормально плиз");
+            }
+        }
+    }
+    public int scanInteger(String cheVvodit, boolean positiveOnly){
+        while(true) {
+            String input = scanNotEmptyLine(cheVvodit);
+            int res;
             try{
-                return Integer.parseInt(res);
+                res = Integer.parseInt(input);
+                if(positiveOnly && (res<=0)){
+                    System.out.println("необходимо ввести число большее нуля");
+                }else{
+                    return res;
+                }
             }catch (Exception e){
                 System.out.println("введите нормально плиз");
             }
         }
     }
-
-    public int scanIntegerPositive(String cheVvodit){
-        int res=0;
-        while(res<=0){
-            res = scanInteger(cheVvodit);
-        }
-        return res;
-    }
-
-    public float scanFloat(String cheVvodit){
+    public float scanFloat(String cheVvodit, boolean positiveOnly){
         while(true) {
-            String res = scanNotEmptyLine(cheVvodit);
+            String input = scanNotEmptyLine(cheVvodit);
+            float res;
             try{
-                return Float.parseFloat(res);
+                res = Float.parseFloat(input);
+                if(positiveOnly && (res<=0)){
+                    System.out.println("необходимо ввести число большее нуля");
+                }else{
+                    return res;
+                }
             }catch (Exception e){
                 System.out.println("введите нормально плиз");
             }
         }
     }
-
-    public float scanFloatPositive(String cheVvodit){
-        float res=0;
-        while(res<=0){
-            res = scanFloat(cheVvodit);
-        }
-        return res;
-    }
-
-    public long scanLong(String cheVvodit){
+    public long scanLong(String cheVvodit, boolean positiveOnly){
         while(true) {
-            String res = scanNotEmptyLine(cheVvodit);
+            String input = scanNotEmptyLine(cheVvodit);
+            long res;
             try{
-                return Long.parseLong(res);
+                res = Long.parseLong(input);
+                if(positiveOnly && (res<=0)){
+                    System.out.println("необходимо ввести число большее нуля");
+                }else{
+                    return res;
+                }
             }catch (Exception e){
                 System.out.println("введите нормально плиз");
             }
         }
     }
-
-
     public LocalDateTime scanLocalDateTimeNoNull(String cheVvodit){
         System.out.println(cheVvodit);
-        int god = scanIntegerPositive("год");
+        int god = scanInteger("год", true);
         System.out.println("Доступные значения Month: ");
         Month mon;
         for(Month t : Month.values()){
@@ -176,7 +113,7 @@ public class InputHelper {
             String str = scanNotEmptyLine(cheVvodit);
             try{
                 mon = Month.valueOf(str);
-                int day = scanIntegerPositive("день");
+                int day = scanInteger("день", true);
                 return LocalDateTime.of(god, mon, day, 0, 0);
             }catch(IllegalArgumentException|NullPointerException e){
                 System.out.println("введите нормально плиз");
@@ -187,9 +124,9 @@ public class InputHelper {
     }
     public Location scanLocation(String cheVvodit){
         System.out.println("введите " + cheVvodit);
-        int x = scanInteger("координата Х места");
-        long y = scanLong("координата Y места");
-        float z = scanFloat("координата Z места");
+        int x = scanInteger("координата Х места", false);
+        long y = scanLong("координата Y места", false);
+        float z = scanFloat("координата Z места", false);
         String locName = scanStringArg("название места");
         return new Location(x, y, z, locName);
     }
@@ -197,24 +134,24 @@ public class InputHelper {
     public Dragon scanDragon(String cheVvdoit){
         String name = scanStringArg("имя дракона");
         System.out.println("Координаты.");
-        int x = scanInteger("Х");
-        int y = scanInteger("Y");
+        int x = scanInteger("Х", false);
+        int y = scanInteger("Y", false);
         Coordinates coordinates = new Coordinates(x, y);
-        int age = scanIntegerPositive("возраст дракона");
-        float wingspan = scanFloatPositive("размах крыльев (да, размах крыльев, да это число)");
-        DragonType type = scanDragonTypeCanBeNull("тип дракона");
-        DragonCharacter character = scanCharacterNotNull("характер дракона");
-        Person killer = scanPerson("убийца дракона!");
+        int age = scanInteger("возраст дракона", true);
+        float wingspan = scanFloat("размах крыльев (да, размах крыльев, да это число)", true);
+        DragonType type = (DragonType) scanEnum("тип дракона", true, DragonType.class);
+        DragonCharacter character = (DragonCharacter) scanEnum("характер дракона", false, DragonCharacter.class);
+        Person killer = scanPerson("убийца дракона");
         return new Dragon(name, coordinates, age,
                 wingspan, type, character, killer);
     }
     public Person scanPerson(String cheVvodit){
         System.out.println("введите " + cheVvodit);
         String name = scanLine("имя");
-        if(name.equals("")) return null;
+        if(name.equals("")) return null; // Person может быть пустым
         LocalDateTime birthday = scanLocalDateTimeNoNull("дата рождения");
-        Color hairColor = scanColor("цвет волос");
-        Country country = scanCountry("национальность");
+        Color hairColor = (Color) scanEnum("цвет волос", true, Color.class);
+        Country country = (Country) scanEnum("национальность", true, Country.class);
         Location loc = scanLocation("локацию");
         return new Person(name, birthday, hairColor, country, loc);
     }

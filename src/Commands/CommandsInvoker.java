@@ -2,10 +2,8 @@ package Commands;
 
 import Exceptions.NoSuchCommandException;
 import Exceptions.NotValidTypeOfArgumentException;
-import Exceptions.PrepodLomaetMoyuProguException;
 import Exceptions.WrongArgumentsNumberException;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 
 public class CommandsInvoker {
@@ -35,19 +33,12 @@ public class CommandsInvoker {
     }
     public void execute(String commandName, String[] arguments) throws NoSuchCommandException,
                                                                         WrongArgumentsNumberException,
-                                                                        NotValidTypeOfArgumentException,
-                                                                        PrepodLomaetMoyuProguException {
+                                                                        NotValidTypeOfArgumentException{
         if(registeredCommands.containsKey(commandName)){
-            // не забыть про пробелы перед командами
             Command command = registeredCommands.get(commandName);
             int requiredArgs = command.getNumberOfRequiredArgs();
             if(requiredArgs == arguments.length){
-               if(requiredArgs != 0){
-                    // тут какая-то проверка на то валидны аргументы или не TODO
-                   command.execute(arguments);
-               }else{
-                   command.execute(arguments);
-               }
+               command.execute(arguments);
             }else{
                 throw new WrongArgumentsNumberException(requiredArgs, arguments.length);
             }

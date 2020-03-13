@@ -14,4 +14,9 @@ public class PrintDescendingCommand extends Command {
     public void execute(String[] cmdArgs) {
         receiver.getCollection().printDescending();
     }
+
+    @Override
+    public String getDescription() {
+        return "вывести элементы коллекции в порядке убывания";
+    }
 }

@@ -30,4 +30,9 @@ public class UpdateIdCommand extends Command{
             }
         }
     }
+
+    @Override
+    public String getDescription() {
+        return "обновить значение элемента коллекции, id которого равен заданному";
+    }
 }

@@ -6,6 +6,7 @@ import Dragon.MyDragonsCollection;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.TreeMap;
 
 public class CommandReceiver {
     // РЕСИВЕР ЭТО ПОВАР
@@ -24,8 +25,6 @@ public class CommandReceiver {
         return collection;
     }
 
-
-
     public CommandReceiver(HashMap<String, Command> registeredCommands, MyDragonsCollection collection){
         this.registeredCommands = registeredCommands;
         this.collection = collection;
@@ -38,7 +37,9 @@ public class CommandReceiver {
     }
 
     public void printHelp(){
-        for(Map.Entry<String, Command> entry : registeredCommands.entrySet()){
+        //для сортировки по ключу (алфавиту)
+        Map<String, Command> treeMap = new TreeMap<String, Command>(registeredCommands);
+        for(Map.Entry<String, Command> entry : treeMap.entrySet()){
             System.out.println(entry.getKey() + " : " + entry.getValue().getDescription());
         }
     }

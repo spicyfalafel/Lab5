@@ -1,0 +1,716 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>XML.XmlStaff</OriginalElement>
+  <nodes>
+    <node x="4990.916651548378" y="2140.0">Exceptions.NotValidTypeOfArgumentException</node>
+    <node x="299.7708333333335" y="1173.0">Commands.InputHelper</node>
+    <node x="3079.9166515483776" y="2106.0">Commands.ExitCommand</node>
+    <node x="2807.9166515483776" y="2117.0">Commands.RemoveByIdCommand</node>
+    <node x="642.0438737705999" y="2117.0">Commands.RemoveLowerElement</node>
+    <node x="2211.672119883041" y="1818.0">Commands.CommandReceiver</node>
+    <node x="3623.9166515483776" y="2106.0">Commands.HelpCommand</node>
+    <node x="1196.5638737705995" y="2117.0">Commands.UpdateIdCommand</node>
+    <node x="1388.8038737705997" y="354.0">Dragon.DragonType</node>
+    <node x="1468.5638737705995" y="2117.0">Commands.AddIfMaxCommand</node>
+    <node x="5355.916651548378" y="2095.0">Commands.CommandsInvoker</node>
+    <node x="15.958333333333485" y="1316.0">Dragon.DragonComparator</node>
+    <node x="871.3663737705997" y="56.0">Dragon.Color</node>
+    <node x="914.0438737705997" y="2106.0">Commands.AddElementCommand</node>
+    <node x="1174.3663737705997" y="56.0">Dragon.Country</node>
+    <node x="957.8038737705997" y="287.0">Dragon.Person</node>
+    <node x="2060.0138737705993" y="2117.0">Commands.PrintFieldAscendingWingspanCommand</node>
+    <node x="5892.916651548378" y="1874.0">Exceptions.NoSuchCommandException</node>
+    <node x="5546.916651548378" y="1874.0">Exceptions.WrongArgumentsNumberException</node>
+    <node x="987.3663737705997" y="0.0">Dragon.Location</node>
+    <node x="1030.8038737705997" y="676.0">Dragon.Dragon</node>
+    <node x="4446.916651548378" y="2106.0">Commands.ClearCommand</node>
+    <node x="1740.5638737705995" y="2117.0">Commands.AddIfMinCommand</node>
+    <node x="1215.8038737705997" y="331.0">Dragon.Coordinates</node>
+    <node x="2874.9166515483776" y="830.0">Commands.Executable</node>
+    <node x="4167.916651548378" y="2117.0">Commands.PrintDescendingCommand</node>
+    <node x="4718.916651548378" y="2117.0">Commands.SaveCommand</node>
+    <node x="2480.9166515483776" y="2117.0">Commands.FilterStartsWithNameCommand</node>
+    <node x="5388.949897660819" y="1305.0">XML.XmlStaff</node>
+    <node x="2068.236095992822" y="1173.0">Dragon.MyDragonsCollection</node>
+    <node x="3351.9166515483776" y="2106.0">Commands.InfoCommand</node>
+    <node x="2930.09850672293" y="2380.0">Main.Main</node>
+    <node x="2849.9166515483776" y="1305.0">Commands.Command</node>
+    <node x="745.8038737705997" y="354.0">Dragon.DragonCharacter</node>
+    <node x="3895.9166515483776" y="2106.0">Commands.ShowCommand</node>
+    <node x="2982.59850672293" y="2511.0">Commands.ExecuteScriptCommand</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="Commands.ExecuteScriptCommand" target="Commands.Command">
+      <point x="100.80000000000018" y="-40.5" />
+      <point x="3209.39850672293" y="2491.0" />
+      <point x="6186.546651548378" y="2491.0" />
+      <point x="6186.546651548378" y="1618.0" />
+      <point x="3098.6008620746925" y="1618.0" />
+      <point x="122.68421052631538" y="40.5" />
+    </edge>
+    <edge source="Commands.UpdateIdCommand" target="Dragon.Dragon">
+      <point x="-21.0" y="-40.5" />
+      <point x="1301.5638737705995" y="1153.0" />
+      <point x="1173.2538737705997" y="1153.0" />
+      <point x="12.950000000000045" y="183.5" />
+    </edge>
+    <edge source="Commands.ExitCommand" target="Commands.Command">
+      <point x="0.0" y="-51.5" />
+      <point x="3205.9166515483776" y="2075.0" />
+      <point x="3242.4166515483776" y="2075.0" />
+      <point x="3242.4166515483776" y="1788.0" />
+      <point x="2985.86401996943" y="1788.0" />
+      <point x="9.947368421052488" y="40.5" />
+    </edge>
+    <edge source="Commands.ExecuteScriptCommand" target="Main.Main">
+      <point x="-50.40000000000009" y="-40.5" />
+      <point x="3058.19850672293" y="2481.0" />
+      <point x="2989.59850672293" y="2481.0" />
+      <point x="-59.5" y="40.5" />
+    </edge>
+    <edge source="Commands.InputHelper" target="Dragon.Dragon">
+      <point x="168.66666666666697" y="-172.5" />
+      <point x="652.4375000000005" y="1133.0" />
+      <point x="1095.5538737705997" y="1133.0" />
+      <point x="-64.75" y="183.5" />
+    </edge>
+    <edge source="Commands.Command" target="Commands.CommandReceiver">
+      <point x="-29.84210526315792" y="40.5" />
+      <point x="2946.074546285219" y="1758.0" />
+      <point x="2503.422119883041" y="1758.0" />
+      <point x="97.25" y="-73.5" />
+    </edge>
+    <edge source="Main.Main" target="Commands.ShowCommand">
+      <point x="28.559999999999945" y="-40.5" />
+      <point x="3077.65850672293" y="2270.0" />
+      <point x="4021.9166515483776" y="2270.0" />
+      <point x="0.0" y="51.5" />
+    </edge>
+    <edge source="Commands.InfoCommand" target="Commands.Command">
+      <point x="84.0" y="-51.5" />
+      <point x="3561.9166515483776" y="2075.0" />
+      <point x="3525.4166515483776" y="2075.0" />
+      <point x="3525.4166515483776" y="1758.0" />
+      <point x="3005.758756811535" y="1758.0" />
+      <point x="29.84210526315792" y="40.5" />
+    </edge>
+    <edge source="Commands.AddIfMinCommand" target="Commands.InputHelper">
+      <point x="-100.80000000000018" y="-40.5" />
+      <point x="1765.7638737705993" y="1995.0" />
+      <point x="1824.8638737705992" y="1995.0" />
+      <point x="1824.8638737705992" y="1548.0" />
+      <point x="612.5708333333337" y="1548.0" />
+      <point x="128.80000000000018" y="172.5" />
+    </edge>
+    <edge source="Commands.PrintFieldAscendingWingspanCommand" target="Commands.Command">
+      <point x="-124.66666666666674" y="-40.5" />
+      <point x="2122.3472071039328" y="2005.0" />
+      <point x="2179.1805404372662" y="2005.0" />
+      <point x="2179.1805404372662" y="1718.0" />
+      <point x="2919.548230495746" y="1718.0" />
+      <point x="-56.368421052631675" y="40.5" />
+    </edge>
+    <edge source="Commands.PrintDescendingCommand" target="Commands.CommandReceiver">
+      <point x="-86.33333333333348" y="-40.5" />
+      <point x="4211.083318215044" y="2005.0" />
+      <point x="2546.644342105263" y="2005.0" />
+      <point x="140.47222222222217" y="73.5" />
+    </edge>
+    <edge source="Commands.FilterStartsWithNameCommand" target="Commands.CommandReceiver">
+      <point x="-102.33333333333326" y="-40.5" />
+      <point x="2532.083318215044" y="2065.0" />
+      <point x="2416.9776754385966" y="2065.0" />
+      <point x="10.805555555555657" y="73.5" />
+    </edge>
+    <edge source="Main.Main" target="Exceptions.NoSuchCommandException">
+      <point x="104.7199999999998" y="-40.5" />
+      <point x="3153.8185067229297" y="2350.0" />
+      <point x="6087.166651548378" y="2350.0" />
+      <point x="64.75" y="17.5" />
+    </edge>
+    <edge source="Commands.RemoveLowerElement" target="Commands.Command">
+      <point x="63.0" y="-40.5" />
+      <point x="831.0438737705999" y="2065.0" />
+      <point x="769.0438737705999" y="2065.0" />
+      <point x="769.0438737705999" y="1628.0" />
+      <point x="2859.86401996943" y="1628.0" />
+      <point x="-116.05263157894751" y="40.5" />
+    </edge>
+    <edge source="Commands.AddIfMaxCommand" target="Commands.Command">
+      <point x="0.0" y="-40.5" />
+      <point x="1594.5638737705995" y="2005.0" />
+      <point x="1574.8638737705992" y="2005.0" />
+      <point x="1574.8638737705992" y="1678.0" />
+      <point x="2893.0219147062717" y="1678.0" />
+      <point x="-82.89473684210543" y="40.5" />
+    </edge>
+    <edge source="Main.Main" target="Commands.ExecuteScriptCommand">
+      <point x="59.5" y="40.5" />
+      <point x="0.0" y="-40.5" />
+    </edge>
+    <edge source="XML.XmlStaff" target="Dragon.Color">
+      <point x="85.625" y="-40.5" />
+      <point x="5680.074897660819" y="197.0" />
+      <point x="955.3663737705997" y="197.0" />
+      <point x="36.0" y="17.5" />
+    </edge>
+    <edge source="Main.Main" target="Commands.InfoCommand">
+      <point x="9.519999999999982" y="-40.5" />
+      <point x="3058.61850672293" y="2250.0" />
+      <point x="3477.9166515483776" y="2250.0" />
+      <point x="0.0" y="51.5" />
+    </edge>
+    <edge source="XML.XmlStaff" target="Dragon.Person">
+      <point x="-51.375" y="-40.5" />
+      <point x="5543.074897660819" y="1083.0" />
+      <point x="5383.093988680665" y="1083.0" />
+      <point x="5383.093988680665" y="506.0" />
+      <point x="1175.9705404372664" y="506.0" />
+      <point x="99.16666666666674" y="84.5" />
+    </edge>
+    <edge source="Dragon.DragonComparator" target="Dragon.DragonCharacter">
+      <point x="-59.5" y="-29.5" />
+      <point x="75.45833333333348" y="556.0" />
+      <point x="765.0038737706" y="556.0" />
+      <point x="-76.79999999999973" y="17.5" />
+    </edge>
+    <edge source="Main.Main" target="Commands.AddIfMinCommand">
+      <point x="-57.11999999999989" y="-40.5" />
+      <point x="2991.97850672293" y="2300.0" />
+      <point x="1866.5638737705995" y="2300.0" />
+      <point x="0.0" y="40.5" />
+    </edge>
+    <edge source="Main.Main" target="Commands.HelpCommand">
+      <point x="19.039999999999964" y="-40.5" />
+      <point x="3068.13850672293" y="2260.0" />
+      <point x="3749.9166515483776" y="2260.0" />
+      <point x="0.0" y="51.5" />
+    </edge>
+    <edge source="Main.Main" target="Exceptions.WrongArgumentsNumberException">
+      <point x="95.19999999999982" y="-40.5" />
+      <point x="3144.2985067229297" y="2340.0" />
+      <point x="5791.416651548378" y="2340.0" />
+      <point x="81.5" y="17.5" />
+    </edge>
+    <edge source="Commands.SaveCommand" target="Commands.CommandReceiver">
+      <point x="-94.5" y="-40.5" />
+      <point x="4750.416651548378" y="1985.0" />
+      <point x="2589.8665643274853" y="1985.0" />
+      <point x="183.69444444444434" y="73.5" />
+    </edge>
+    <edge source="Main.Main" target="Commands.RemoveByIdCommand">
+      <point x="-9.519999999999982" y="-40.5" />
+      <point x="3039.57850672293" y="2250.0" />
+      <point x="2933.9166515483776" y="2250.0" />
+      <point x="0.0" y="40.5" />
+    </edge>
+    <edge source="Dragon.MyDragonsCollection" target="Dragon.Dragon">
+      <point x="90.0" y="-172.5" />
+      <point x="2338.236095992822" y="1133.0" />
+      <point x="1225.0538737705997" y="1133.0" />
+      <point x="64.75" y="183.5" />
+    </edge>
+    <edge source="Commands.CommandReceiver" target="Commands.Command">
+      <point x="-32.416666666666515" y="-73.5" />
+      <point x="2373.7554532163745" y="1738.0" />
+      <point x="2932.8113883904825" y="1738.0" />
+      <point x="-43.10526315789457" y="40.5" />
+    </edge>
+    <edge source="Main.Main" target="Commands.ExitCommand">
+      <point x="0.0" y="-40.5" />
+      <point x="3049.09850672293" y="2240.0" />
+      <point x="3205.9166515483776" y="2240.0" />
+      <point x="0.0" y="51.5" />
+    </edge>
+    <edge source="Main.Main" target="Commands.CommandReceiver">
+      <point x="-47.59999999999991" y="-40.5" />
+      <point x="3001.49850672293" y="2290.0" />
+      <point x="2049.5138737705993" y="2290.0" />
+      <point x="2049.5138737705993" y="2075.0" />
+      <point x="2352.144342105263" y="2075.0" />
+      <point x="-54.02777777777783" y="73.5" />
+    </edge>
+    <edge source="Commands.AddIfMinCommand" target="Commands.CommandReceiver">
+      <point x="100.80000000000018" y="-40.5" />
+      <point x="1967.3638737705996" y="2055.0" />
+      <point x="2308.922119883041" y="2055.0" />
+      <point x="-97.25" y="73.5" />
+    </edge>
+    <edge source="Commands.InputHelper" target="Dragon.Country">
+      <point x="-76.66666666666697" y="-172.5" />
+      <point x="407.1041666666665" y="1073.0" />
+      <point x="333.5745755803641" y="1073.0" />
+      <point x="333.5745755803641" y="247.0" />
+      <point x="1188.7413737705997" y="247.0" />
+      <point x="-43.125" y="17.5" />
+    </edge>
+    <edge source="Commands.InfoCommand" target="Commands.CommandReceiver">
+      <point x="-84.0" y="-51.5" />
+      <point x="3393.9166515483776" y="2035.0" />
+      <point x="2481.81100877193" y="2035.0" />
+      <point x="75.63888888888914" y="73.5" />
+    </edge>
+    <edge source="Commands.ShowCommand" target="Commands.CommandReceiver">
+      <point x="-84.0" y="-51.5" />
+      <point x="3937.9166515483776" y="2015.0" />
+      <point x="2525.033230994152" y="2015.0" />
+      <point x="118.86111111111086" y="73.5" />
+    </edge>
+    <edge source="Commands.AddElementCommand" target="Dragon.Dragon">
+      <point x="-21.0" y="-51.5" />
+      <point x="1019.0438737705997" y="1153.0" />
+      <point x="1147.3538737705996" y="1153.0" />
+      <point x="-12.950000000000045" y="183.5" />
+    </edge>
+    <edge source="Dragon.Person" target="Dragon.Color">
+      <point x="-99.16666666666674" y="-84.5" />
+      <point x="977.637207103933" y="217.0" />
+      <point x="907.3663737705997" y="217.0" />
+      <point x="-12.0" y="17.5" />
+    </edge>
+    <edge source="XML.XmlStaff" target="Dragon.Location">
+      <point x="119.875" y="-40.5" />
+      <point x="5714.324897660819" y="1153.0" />
+      <point x="5691.074897660819" y="1153.0" />
+      <point x="5691.074897660819" y="187.0" />
+      <point x="1112.6163737705997" y="187.0" />
+      <point x="41.75" y="73.5" />
+    </edge>
+    <edge source="Commands.ClearCommand" target="Commands.CommandReceiver">
+      <point x="-84.0" y="-51.5" />
+      <point x="4488.916651548378" y="1995.0" />
+      <point x="2568.2554532163745" y="1995.0" />
+      <point x="162.08333333333348" y="73.5" />
+    </edge>
+    <edge source="Commands.AddElementCommand" target="Commands.Command">
+      <point x="21.0" y="-51.5" />
+      <point x="1061.0438737705997" y="2005.0" />
+      <point x="1030.0438737705997" y="2005.0" />
+      <point x="1030.0438737705997" y="1638.0" />
+      <point x="2866.4955989167984" y="1638.0" />
+      <point x="-109.42105263157873" y="40.5" />
+    </edge>
+    <edge source="Commands.HelpCommand" target="Commands.CommandReceiver">
+      <point x="-84.0" y="-51.5" />
+      <point x="3665.9166515483776" y="2025.0" />
+      <point x="2503.422119883041" y="2025.0" />
+      <point x="97.25" y="73.5" />
+    </edge>
+    <edge source="Main.Main" target="Commands.PrintFieldAscendingWingspanCommand">
+      <point x="-38.07999999999993" y="-40.5" />
+      <point x="3011.01850672293" y="2280.0" />
+      <point x="2247.0138737705993" y="2280.0" />
+      <point x="0.0" y="40.5" />
+    </edge>
+    <edge source="Commands.CommandsInvoker" target="Exceptions.NoSuchCommandException">
+      <point x="159.375" y="-62.5" />
+      <point x="5727.791651548378" y="2075.0" />
+      <point x="5957.666651548378" y="2075.0" />
+      <point x="-64.75" y="17.5" />
+    </edge>
+    <edge source="Commands.AddElementCommand" target="Commands.InputHelper">
+      <point x="-63.0" y="-51.5" />
+      <point x="977.0438737705997" y="2005.0" />
+      <point x="991.0125000000003" y="2005.0" />
+      <point x="991.0125000000003" y="1598.0" />
+      <point x="428.57083333333367" y="1598.0" />
+      <point x="-55.19999999999982" y="172.5" />
+    </edge>
+    <edge source="Main.Main" target="Commands.AddElementCommand">
+      <point x="-104.72000000000025" y="-40.5" />
+      <point x="2944.3785067229296" y="2350.0" />
+      <point x="1040.0438737705997" y="2350.0" />
+      <point x="0.0" y="51.5" />
+    </edge>
+    <edge source="Commands.ExecuteScriptCommand" target="Commands.CommandReceiver">
+      <point x="-100.80000000000018" y="-40.5" />
+      <point x="3007.7985067229297" y="2491.0" />
+      <point x="2003.0638737705995" y="2491.0" />
+      <point x="2003.0638737705995" y="2065.0" />
+      <point x="2330.5332309941523" y="2065.0" />
+      <point x="-75.63888888888869" y="73.5" />
+    </edge>
+    <edge source="Commands.CommandsInvoker" target="Exceptions.WrongArgumentsNumberException">
+      <point x="53.125" y="-62.5" />
+      <point x="5621.541651548378" y="2075.0" />
+      <point x="5628.416651548378" y="2075.0" />
+      <point x="-81.5" y="17.5" />
+    </edge>
+    <edge source="Commands.ExitCommand" target="Commands.CommandReceiver">
+      <point x="-84.0" y="-51.5" />
+      <point x="3121.9166515483776" y="2045.0" />
+      <point x="2460.199897660819" y="2045.0" />
+      <point x="54.02777777777783" y="73.5" />
+    </edge>
+    <edge source="Commands.InputHelper" target="Dragon.Location">
+      <point x="-107.33333333333303" y="-172.5" />
+      <point x="376.43750000000045" y="1083.0" />
+      <point x="245.3454089136976" y="1083.0" />
+      <point x="245.3454089136976" y="237.0" />
+      <point x="1029.1163737705997" y="237.0" />
+      <point x="-41.75" y="73.5" />
+    </edge>
+    <edge source="Commands.ShowCommand" target="Commands.Command">
+      <point x="0.0" y="-51.5" />
+      <point x="4021.9166515483776" y="2075.0" />
+      <point x="4058.4166515483776" y="2075.0" />
+      <point x="4058.4166515483776" y="1728.0" />
+      <point x="3025.65349365364" y="1728.0" />
+      <point x="49.736842105262895" y="40.5" />
+    </edge>
+    <edge source="Commands.InputHelper" target="Dragon.Person">
+      <point x="15.33333333333303" y="-172.5" />
+      <point x="499.1041666666665" y="1103.0" />
+      <point x="476.74124224703064" y="1103.0" />
+      <point x="476.74124224703064" y="586.0" />
+      <point x="1017.3038737705997" y="586.0" />
+      <point x="-59.5" y="84.5" />
+    </edge>
+    <edge source="Main.Main" target="Exceptions.NotValidTypeOfArgumentException">
+      <point x="66.63999999999987" y="-40.5" />
+      <point x="3115.7385067229297" y="2310.0" />
+      <point x="5163.416651548378" y="2310.0" />
+      <point x="0.0" y="17.5" />
+    </edge>
+    <edge source="Commands.ClearCommand" target="Commands.Command">
+      <point x="84.0" y="-51.5" />
+      <point x="4656.916651548378" y="2075.0" />
+      <point x="4620.416651548378" y="2075.0" />
+      <point x="4620.416651548378" y="1678.0" />
+      <point x="3058.8113883904825" y="1678.0" />
+      <point x="82.89473684210498" y="40.5" />
+    </edge>
+    <edge source="Commands.SaveCommand" target="Commands.Command">
+      <point x="31.5" y="-40.5" />
+      <point x="4876.416651548378" y="1658.0" />
+      <point x="3072.074546285219" y="1658.0" />
+      <point x="96.15789473684208" y="40.5" />
+    </edge>
+    <edge source="Main.Main" target="Commands.PrintDescendingCommand">
+      <point x="38.07999999999993" y="-40.5" />
+      <point x="3087.17850672293" y="2280.0" />
+      <point x="4297.416651548378" y="2280.0" />
+      <point x="0.0" y="40.5" />
+    </edge>
+    <edge source="Main.Main" target="Commands.SaveCommand">
+      <point x="57.11999999999989" y="-40.5" />
+      <point x="3106.2185067229298" y="2300.0" />
+      <point x="4844.916651548378" y="2300.0" />
+      <point x="0.0" y="40.5" />
+    </edge>
+    <edge source="Commands.InputHelper" target="Dragon.DragonType">
+      <point x="107.33333333333303" y="-172.5" />
+      <point x="591.1041666666665" y="1103.0" />
+      <point x="744.354166666667" y="1103.0" />
+      <point x="744.354166666667" y="636.0" />
+      <point x="1406.8038737705997" y="636.0" />
+      <point x="-54.0" y="17.5" />
+    </edge>
+    <edge source="Main.Main" target="Dragon.MyDragonsCollection">
+      <point x="-85.68000000000029" y="-40.5" />
+      <point x="2963.4185067229296" y="2330.0" />
+      <point x="1186.0638737705995" y="2330.0" />
+      <point x="1186.0638737705995" y="1608.0" />
+      <point x="2203.236095992822" y="1608.0" />
+      <point x="-45.0" y="172.5" />
+    </edge>
+    <edge source="Commands.InputHelper" target="Dragon.Coordinates">
+      <point x="76.66666666666697" y="-172.5" />
+      <point x="560.4375000000005" y="1093.0" />
+      <point x="655.229166666667" y="1093.0" />
+      <point x="655.229166666667" y="606.0" />
+      <point x="1254.0538737705997" y="606.0" />
+      <point x="-38.25" y="40.5" />
+    </edge>
+    <edge source="Dragon.Person" target="Dragon.Country">
+      <point x="59.5" y="-84.5" />
+      <point x="1136.3038737705997" y="257.0" />
+      <point x="1217.4913737705997" y="257.0" />
+      <point x="-14.375" y="17.5" />
+    </edge>
+    <edge source="XML.XmlStaff" target="Dragon.Country">
+      <point x="188.375" y="-40.5" />
+      <point x="5782.824897660819" y="1133.0" />
+      <point x="5713.074897660819" y="1133.0" />
+      <point x="5713.074897660819" y="167.0" />
+      <point x="1274.9913737705997" y="167.0" />
+      <point x="43.125" y="17.5" />
+    </edge>
+    <edge source="Main.Main" target="XML.XmlStaff">
+      <point x="114.23999999999978" y="-40.5" />
+      <point x="3163.3385067229297" y="2360.0" />
+      <point x="6162.416651548378" y="2360.0" />
+      <point x="6162.416651548378" y="1798.0" />
+      <point x="5697.199897660819" y="1798.0" />
+      <point x="102.75" y="40.5" />
+    </edge>
+    <edge source="Commands.AddIfMaxCommand" target="Commands.InputHelper">
+      <point x="-100.80000000000018" y="-40.5" />
+      <point x="1493.7638737705993" y="1995.0" />
+      <point x="1552.8638737705992" y="1995.0" />
+      <point x="1552.8638737705992" y="1568.0" />
+      <point x="538.9708333333333" y="1568.0" />
+      <point x="55.19999999999982" y="172.5" />
+    </edge>
+    <edge source="Commands.PrintDescendingCommand" target="Commands.Command">
+      <point x="0.0" y="-40.5" />
+      <point x="4297.416651548378" y="2075.0" />
+      <point x="4335.083318215044" y="2075.0" />
+      <point x="4335.083318215044" y="1708.0" />
+      <point x="3038.9166515483776" y="1708.0" />
+      <point x="63.0" y="40.5" />
+    </edge>
+    <edge source="Commands.PrintFieldAscendingWingspanCommand" target="Commands.CommandReceiver">
+      <point x="124.66666666666652" y="-40.5" />
+      <point x="2371.6805404372662" y="2075.0" />
+      <point x="2373.7554532163745" y="2075.0" />
+      <point x="-32.416666666666515" y="73.5" />
+    </edge>
+    <edge source="Commands.AddElementCommand" target="Commands.CommandReceiver">
+      <point x="105.0" y="-51.5" />
+      <point x="1145.0438737705997" y="2025.0" />
+      <point x="2244.0887865497075" y="2025.0" />
+      <point x="-162.08333333333348" y="73.5" />
+    </edge>
+    <edge source="Commands.FilterStartsWithNameCommand" target="Commands.Command">
+      <point x="0.0" y="-40.5" />
+      <point x="2634.4166515483776" y="2075.0" />
+      <point x="2680.0833182150436" y="2075.0" />
+      <point x="2680.0833182150436" y="1778.0" />
+      <point x="2959.337704179956" y="1778.0" />
+      <point x="-16.578947368421268" y="40.5" />
+    </edge>
+    <edge source="Commands.RemoveLowerElement" target="Commands.InputHelper">
+      <point x="-63.0" y="-40.5" />
+      <point x="705.0438737705999" y="2065.0" />
+      <point x="498.2208333333333" y="2065.0" />
+      <point x="498.2208333333333" y="1788.0" />
+      <point x="354.9708333333333" y="1788.0" />
+      <point x="-128.80000000000018" y="172.5" />
+    </edge>
+    <edge source="Commands.UpdateIdCommand" target="Commands.CommandReceiver">
+      <point x="105.0" y="-40.5" />
+      <point x="1427.5638737705995" y="2035.0" />
+      <point x="2265.699897660819" y="2035.0" />
+      <point x="-140.47222222222217" y="73.5" />
+    </edge>
+    <edge source="Commands.HelpCommand" target="Commands.Command">
+      <point x="84.0" y="-51.5" />
+      <point x="3833.9166515483776" y="2075.0" />
+      <point x="3797.4166515483776" y="2075.0" />
+      <point x="3797.4166515483776" y="1738.0" />
+      <point x="3019.0219147062717" y="1738.0" />
+      <point x="43.10526315789457" y="40.5" />
+    </edge>
+    <edge source="Commands.AddIfMinCommand" target="Commands.Command">
+      <point x="50.399999999999636" y="-40.5" />
+      <point x="1916.963873770599" y="1995.0" />
+      <point x="1857.8638737705992" y="1995.0" />
+      <point x="1857.8638737705992" y="1708.0" />
+      <point x="2912.9166515483776" y="1708.0" />
+      <point x="-63.0" y="40.5" />
+    </edge>
+    <edge source="Dragon.Dragon" target="Dragon.Person">
+      <point x="-16.1875" y="-183.5" />
+      <point x="1144.1163737705997" y="536.0" />
+      <point x="1096.637207103933" y="536.0" />
+      <point x="19.833333333333258" y="84.5" />
+    </edge>
+    <edge source="Main.Main" target="Commands.CommandsInvoker">
+      <point x="76.15999999999985" y="-40.5" />
+      <point x="3125.2585067229297" y="2320.0" />
+      <point x="5462.166651548378" y="2320.0" />
+      <point x="-106.25" y="62.5" />
+    </edge>
+    <edge source="XML.XmlStaff" target="Dragon.Dragon">
+      <point x="-154.125" y="-40.5" />
+      <point x="5440.324897660819" y="1113.0" />
+      <point x="1276.8538737705999" y="1113.0" />
+      <point x="116.55000000000018" y="183.5" />
+    </edge>
+    <edge source="Commands.RemoveLowerElement" target="Dragon.Dragon">
+      <point x="-21.0" y="-40.5" />
+      <point x="747.0438737705999" y="1143.0" />
+      <point x="1121.4538737705998" y="1143.0" />
+      <point x="-38.84999999999991" y="183.5" />
+    </edge>
+    <edge source="Dragon.Dragon" target="Dragon.Coordinates">
+      <point x="48.5625" y="-183.5" />
+      <point x="1208.8663737705997" y="626.0" />
+      <point x="1305.0538737705997" y="626.0" />
+      <point x="12.75" y="40.5" />
+    </edge>
+    <edge source="Main.Main" target="Commands.FilterStartsWithNameCommand">
+      <point x="-19.039999999999964" y="-40.5" />
+      <point x="3030.05850672293" y="2260.0" />
+      <point x="2634.4166515483776" y="2260.0" />
+      <point x="0.0" y="40.5" />
+    </edge>
+    <edge source="Commands.CommandsInvoker" target="Commands.Command">
+      <point x="-159.375" y="-62.5" />
+      <point x="5409.041651548378" y="2075.0" />
+      <point x="5270.887397660819" y="2075.0" />
+      <point x="5270.887397660819" y="1648.0" />
+      <point x="3078.7061252325875" y="1648.0" />
+      <point x="102.7894736842104" y="40.5" />
+    </edge>
+    <edge source="Dragon.Person" target="Dragon.Location">
+      <point x="19.833333333333258" y="-84.5" />
+      <point x="1096.637207103933" y="237.0" />
+      <point x="1084.7830404372664" y="237.0" />
+      <point x="13.916666666666742" y="73.5" />
+    </edge>
+    <edge source="Commands.RemoveByIdCommand" target="Commands.CommandReceiver">
+      <point x="-84.0" y="-40.5" />
+      <point x="2849.9166515483776" y="2055.0" />
+      <point x="2438.5887865497075" y="2055.0" />
+      <point x="32.416666666666515" y="73.5" />
+    </edge>
+    <edge source="Main.Main" target="Commands.ClearCommand">
+      <point x="47.59999999999991" y="-40.5" />
+      <point x="3096.69850672293" y="2290.0" />
+      <point x="4572.916651548378" y="2290.0" />
+      <point x="0.0" y="51.5" />
+    </edge>
+    <edge source="Commands.SaveCommand" target="XML.XmlStaff">
+      <point x="94.50000000000023" y="-40.5" />
+      <point x="4939.416651548378" y="2075.0" />
+      <point x="4912.002760610489" y="2075.0" />
+      <point x="4912.002760610489" y="1798.0" />
+      <point x="5491.699897660819" y="1798.0" />
+      <point x="-102.75" y="40.5" />
+    </edge>
+    <edge source="Dragon.Dragon" target="Dragon.DragonType">
+      <point x="113.3125" y="-183.5" />
+      <point x="1273.6163737705997" y="656.0" />
+      <point x="1478.8038737705997" y="656.0" />
+      <point x="18.0" y="17.5" />
+    </edge>
+    <edge source="XML.XmlStaff" target="Dragon.DragonType">
+      <point x="51.375" y="-40.5" />
+      <point x="5645.824897660819" y="1153.0" />
+      <point x="5669.074897660819" y="1153.0" />
+      <point x="5669.074897660819" y="476.0" />
+      <point x="1514.8038737705997" y="476.0" />
+      <point x="54.0" y="17.5" />
+    </edge>
+    <edge source="Commands.UpdateIdCommand" target="Commands.Command">
+      <point x="63.0" y="-40.5" />
+      <point x="1385.5638737705995" y="1995.0" />
+      <point x="1323.5638737705995" y="1995.0" />
+      <point x="1323.5638737705995" y="1668.0" />
+      <point x="2886.3903357589033" y="1668.0" />
+      <point x="-89.52631578947376" y="40.5" />
+    </edge>
+    <edge source="Dragon.Dragon" target="Dragon.DragonCharacter">
+      <point x="-113.3125" y="-183.5" />
+      <point x="1046.9913737705997" y="566.0" />
+      <point x="841.8038737705997" y="566.0" />
+      <point x="0.0" y="17.5" />
+    </edge>
+    <edge source="Commands.InputHelper" target="Dragon.DragonCharacter">
+      <point x="-46.0" y="-172.5" />
+      <point x="437.7708333333335" y="1063.0" />
+      <point x="373.12457558036385" y="1063.0" />
+      <point x="373.12457558036385" y="566.0" />
+      <point x="803.4038737705996" y="566.0" />
+      <point x="-38.40000000000009" y="17.5" />
+    </edge>
+    <edge source="Commands.InputHelper" target="Dragon.Color">
+      <point x="-168.66666666666697" y="-172.5" />
+      <point x="315.1041666666665" y="1103.0" />
+      <point x="0.0" y="1103.0" />
+      <point x="0.0" y="217.0" />
+      <point x="883.3663737705997" y="217.0" />
+      <point x="-36.0" y="17.5" />
+    </edge>
+    <edge source="XML.XmlStaff" target="Dragon.DragonCharacter">
+      <point x="-119.875" y="-40.5" />
+      <point x="5474.574897660819" y="1103.0" />
+      <point x="5243.410655347331" y="1103.0" />
+      <point x="5243.410655347331" y="526.0" />
+      <point x="918.6038737705996" y="526.0" />
+      <point x="76.79999999999995" y="17.5" />
+    </edge>
+    <edge source="Commands.RemoveLowerElement" target="Commands.CommandReceiver">
+      <point x="105.0" y="-40.5" />
+      <point x="873.0438737705999" y="2015.0" />
+      <point x="2222.4776754385966" y="2015.0" />
+      <point x="-183.69444444444434" y="73.5" />
+    </edge>
+    <edge source="Main.Main" target="Commands.AddIfMaxCommand">
+      <point x="-66.63999999999987" y="-40.5" />
+      <point x="2982.45850672293" y="2310.0" />
+      <point x="1594.5638737705995" y="2310.0" />
+      <point x="0.0" y="40.5" />
+    </edge>
+    <edge source="Commands.UpdateIdCommand" target="Commands.InputHelper">
+      <point x="-105.0" y="-40.5" />
+      <point x="1217.5638737705995" y="1995.0" />
+      <point x="1279.5638737705995" y="1995.0" />
+      <point x="1279.5638737705995" y="1588.0" />
+      <point x="465.37083333333385" y="1588.0" />
+      <point x="-18.399999999999636" y="172.5" />
+    </edge>
+    <edge source="Commands.CommandReceiver" target="Dragon.MyDragonsCollection">
+      <point x="-162.08333333333348" y="-73.5" />
+      <point x="2244.0887865497075" y="1608.0" />
+      <point x="2293.236095992822" y="1608.0" />
+      <point x="45.0" y="172.5" />
+    </edge>
+    <edge source="Commands.Command" target="Commands.Executable">
+      <point x="0.0" y="-40.5" />
+      <point x="0.0" y="29.5" />
+    </edge>
+    <edge source="Dragon.DragonComparator" target="Dragon.Dragon">
+      <point x="59.5" y="-29.5" />
+      <point x="194.45833333333348" y="1113.0" />
+      <point x="1043.7538737705997" y="1113.0" />
+      <point x="-116.54999999999995" y="183.5" />
+    </edge>
+    <edge source="Commands.AddIfMaxCommand" target="Commands.CommandReceiver">
+      <point x="100.80000000000018" y="-40.5" />
+      <point x="1695.3638737705996" y="2045.0" />
+      <point x="2287.31100877193" y="2045.0" />
+      <point x="-118.86111111111086" y="73.5" />
+    </edge>
+    <edge source="XML.XmlStaff" target="Dragon.Coordinates">
+      <point x="17.125" y="-40.5" />
+      <point x="5611.574897660819" y="1153.0" />
+      <point x="5614.543901459772" y="1153.0" />
+      <point x="5614.543901459772" y="486.0" />
+      <point x="1356.0538737705997" y="486.0" />
+      <point x="63.75" y="40.5" />
+    </edge>
+    <edge source="Main.Main" target="Commands.RemoveLowerElement">
+      <point x="-114.24000000000024" y="-40.5" />
+      <point x="2934.8585067229296" y="2360.0" />
+      <point x="768.0438737705999" y="2360.0" />
+      <point x="0.0" y="40.5" />
+    </edge>
+    <edge source="Main.Main" target="Commands.UpdateIdCommand">
+      <point x="-76.16000000000031" y="-40.5" />
+      <point x="2972.9385067229296" y="2320.0" />
+      <point x="1322.5638737705995" y="2320.0" />
+      <point x="0.0" y="40.5" />
+    </edge>
+    <edge source="Commands.RemoveByIdCommand" target="Commands.Command">
+      <point x="84.0" y="-40.5" />
+      <point x="3017.9166515483776" y="2075.0" />
+      <point x="2981.4166515483776" y="2075.0" />
+      <point x="2981.4166515483776" y="1798.0" />
+      <point x="2979.2324410220617" y="1798.0" />
+      <point x="3.3157894736841627" y="40.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.3411793136781054" x="2183.861028474288" y="863.9740756481087" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>Project Files</SCOPE>
+  <VISIBILITY>public</VISIBILITY>
+</Diagram>
+

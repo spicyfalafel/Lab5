@@ -1,11 +1,6 @@
 package Dragon;
 
-import Commands.InputHelper;
-
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.HashSet;
-import java.util.Iterator;
+import java.util.*;
 
 public class MyDragonsCollection {
 
@@ -40,16 +35,13 @@ public class MyDragonsCollection {
         creationDate = new Date();
         this.dragons = dragons;
     }
-
     public void show(){
         if(dragons.size() == 0) System.out.println("Коллекция пуста. Добавьте дракончиков.");
         for (Dragon d : dragons){
             System.out.println("----------");
             System.out.println(d.getAllInfoColumn());
-            System.out.println("----------");
         }
     }
-
     public void clear(){
         dragons.clear();
     }
@@ -62,8 +54,6 @@ public class MyDragonsCollection {
             System.out.println("добавлен");
         }
     }
-
-
     public void addIfMin(Dragon dragon){
         if(dragons.iterator().next().getValue()<dragon.getValue()){
             add(dragon);
@@ -72,7 +62,6 @@ public class MyDragonsCollection {
     }
 
     //  удалить из коллекции все элементы, меньшие, чем заданный
-    // TODO check
     public void removeLower(Dragon dragon){
         Iterator<Dragon> iterator = dragons.iterator();
         while(iterator.hasNext()){
@@ -92,15 +81,13 @@ public class MyDragonsCollection {
         }
         return dr;
     }
-
-    //TODO check
     public void printDescending(){
-        Dragon[] dragons1 = (Dragon[]) dragons.toArray();
-        for(int i = dragons1.length-1; i>=0;--i){
-            System.out.println(dragons1[i]);
+        ArrayList<Dragon> dr = new ArrayList<>(dragons);
+        Collections.reverse(dr);
+        for(Dragon d : dr){
+            System.out.println(d.getAllInfoColumn());
         }
     }
-    //TODO прочекать
     public boolean removeById(long id){
         Dragon dragon = findById(id);
         if(dragon != null){
@@ -137,11 +124,15 @@ public class MyDragonsCollection {
         for(float t : a){
             System.out.println(a + " ");
         }
-
     }
+
     public void printCollectionInfo(){
         System.out.println("Тип коллекции: Dragon");
         System.out.println("Дата инициализации: " + creationDate);
         System.out.println("Количество элементов: " + dragons.size());
+    }
+
+    public HashSet<Dragon> getDragons() {
+        return dragons;
     }
 }

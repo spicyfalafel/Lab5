@@ -18,4 +18,9 @@ public class FilterStartsWithNameCommand extends Command {
             System.out.println("капут");
         }
     }
+
+    @Override
+    public String getDescription() {
+        return "вывести элементы, значение поля name которых начинается с заданной подстроки";
+    }
 }

@@ -4,8 +4,8 @@ import Dragon.Dragon;
 
 import java.util.Scanner;
 
-public class RemoveLowerElement extends Command {
-    public RemoveLowerElement(CommandReceiver receiver) {
+public class RemoveLowerElementCommand extends Command {
+    public RemoveLowerElementCommand(CommandReceiver receiver) {
         super(receiver);
     }
 
@@ -20,5 +20,10 @@ public class RemoveLowerElement extends Command {
         InputHelper helper = new InputHelper(sc);
         Dragon dr = helper.scanDragon("дракона");
         receiver.getCollection().removeLower(dr);
+    }
+
+    @Override
+    public String getDescription() {
+        return "удалить из коллекции все элементы, меньшие, чем заданный";
     }
 }

@@ -15,9 +15,10 @@ public class Dragon implements Comparable<Dragon>{
     private float wingspan; //Значение поля должно быть больше 0
     private DragonType type; //Поле может быть null
     private DragonCharacter character; //Поле не может быть null
-    private Person killer; //Поле может быть null
+    private Person killer; //Поле может брыть null
 
     private static long idInc = 0;
+
 
     /**
      * Конструктор со всеми не автогенерируемыми полями
@@ -43,7 +44,7 @@ public class Dragon implements Comparable<Dragon>{
     }
 
     /**
-     * ИСПОЛЬЗУЮ ТОЛЬКО ДЛЯ КОМАНДЫ ОБНОВЛЕНИЯ ПО ID
+     * ИСПОЛЬЗУЮ ТОЛЬКО ДЛЯ КОМАНДЫ ОБНОВЛЕНИЯ ПО ID. КОСТЫЛЬ.
      * @param id
      * @param name
      * @param coordinates
@@ -125,6 +126,7 @@ public class Dragon implements Comparable<Dragon>{
 
     private void generateId(){
         this.id = idInc++;
+        //this.id = (idInc-=-1);
     }
 
     public String getAllInfoColumn(){

@@ -13,6 +13,22 @@ public class Location {
         this.name = name;
     }
 
+    public int getX() {
+        return x;
+    }
+
+    public Long getY() {
+        return y;
+    }
+
+    public Float getZ() {
+        return z;
+    }
+
+    public String getName() {
+        return name;
+    }
+
     @Override
     public String toString() {
         return x +" "+ y +" "+ z +" "+ name;

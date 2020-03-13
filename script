@@ -1,0 +1,8 @@
+help
+info
+show
+exit
+s
+1
+execute_script script2
+execute_script script

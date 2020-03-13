@@ -20,4 +20,9 @@ public class AddIfMinCommand extends Command {
                 addIfMin(helper.
                         scanDragon("дракона которого надо добавить если он минимальный"));
     }
+
+    @Override
+    public String getDescription() {
+        return "добавить новый элемент в коллекцию, если его значение меньше, чем у наименьшего элемента этой коллекции";
+    }
 }

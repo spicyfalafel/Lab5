@@ -23,6 +23,26 @@ public class Person {
         this.birthday = birthday;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public LocalDateTime getBirthday() {
+        return birthday;
+    }
+
+    public Color getHairColor() {
+        return hairColor;
+    }
+
+    public Country getNationality() {
+        return nationality;
+    }
+
+    public Location getLocation() {
+        return location;
+    }
+
     @Override
     public String toString() {
         return name + " " + birthday.toString() + " " +

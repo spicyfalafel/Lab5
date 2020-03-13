@@ -25,6 +25,12 @@ public class CommandsInvoker {
      *
      */
     private static CommandsInvoker instance;
+
+    /**
+     * Get instance commands invoker.
+     *
+     * @return the commands invoker
+     */
     public static CommandsInvoker getInstance(){
         if (instance == null) {
             instance = new CommandsInvoker();
@@ -36,8 +42,9 @@ public class CommandsInvoker {
 
     /**
      * регистрирует команду, т.е. сопоставляет строчку с самой командой
+     *
      * @param commandName строка, по которой будет вызываться команда
-     * @param command сама команда
+     * @param command     сама команда
      */
     public void register(String commandName, Command command){
         registeredCommands.put(commandName, command);
@@ -45,11 +52,12 @@ public class CommandsInvoker {
 
     /**
      * метод для выполнения команды
+     *
      * @param commandName имя команды
-     * @param arguments аргументы
-     * @throws NoSuchCommandException если команда неправильно введена
+     * @param arguments   аргументы
+     * @throws NoSuchCommandException        если команда неправильно введена
      * @throws WrongArgumentsNumberException если аргументов не то количество что нужно
-     * @throws NoSuchDragonException если не нашло какого-то дракона
+     * @throws NoSuchDragonException         если не нашло какого-то дракона
      */
     public void execute(String commandName, String[] arguments) throws NoSuchCommandException,
                                                                         WrongArgumentsNumberException, NoSuchDragonException {
@@ -68,6 +76,7 @@ public class CommandsInvoker {
 
     /**
      * используется, например, в команде help
+     *
      * @return мапа зарегистрированных команд
      */
     public HashMap<String, Command> getMapOfRegisteredCommands(){

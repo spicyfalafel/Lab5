@@ -1,7 +1,15 @@
 package Commands;
 
+/**
+ * The type Clear command.
+ */
 public class ClearCommand extends Command {
 
+    /**
+     * Instantiates a new Clear command.
+     *
+     * @param receiver the receiver
+     */
     public ClearCommand(CommandReceiver receiver) {
         super(receiver);
     }

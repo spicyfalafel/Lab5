@@ -2,7 +2,15 @@ package Commands;
 
 import Exceptions.NoSuchDragonException;
 
+/**
+ * The type Remove by id command.
+ */
 public class RemoveByIdCommand extends Command {
+    /**
+     * Instantiates a new Remove by id command.
+     *
+     * @param receiver the receiver
+     */
     public RemoveByIdCommand(CommandReceiver receiver) {
         super(receiver);
     }

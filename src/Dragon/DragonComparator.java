@@ -2,6 +2,9 @@ package Dragon;
 
 import java.util.Comparator;
 
+/**
+ * The type Dragon comparator.
+ */
 public class DragonComparator implements Comparator<Dragon> {
     @Override
     public int compare(Dragon d1, Dragon d2) {

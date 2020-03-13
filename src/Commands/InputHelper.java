@@ -12,6 +12,12 @@ import java.util.Scanner;
  */
 public class InputHelper {
     private Scanner sc;
+
+    /**
+     * Instantiates a new Input helper.
+     *
+     * @param sc the sc
+     */
     public InputHelper(Scanner sc){
         this.sc = sc;
     }
@@ -45,6 +51,7 @@ public class InputHelper {
     /**
      * метод для ввода аргументов-строк. Все Стринговые аргументы в лабе не могут быть пустыми.
      * Имена то есть.
+     *
      * @param cheVvodit че вводить?
      * @return введенное пользователем, скорее всего, имя
      */
@@ -60,10 +67,11 @@ public class InputHelper {
     /**
      * метод для сканирования любого Enum. проверяет, является ли введенная
      * пользователем строка элементом enum'а, который передается во втором аргументе.
+     *
      * @param cheVvodit че вводить?
      * @param canBeNull может ли быть Enum пустым?
-     * @param enumType тип перечисления
-     * @return
+     * @param enumType  тип перечисления
+     * @return enum
      */
     public Enum<?> scanEnum(String cheVvodit, boolean canBeNull, Class<? extends Enum> enumType){
         while(true) {
@@ -82,9 +90,10 @@ public class InputHelper {
 
     /**
      * метод для сканирования аргумента который должен быть integer
-     * @param cheVvodit че вводить?
+     *
+     * @param cheVvodit    че вводить?
      * @param positiveOnly должно ли число быть только положительным?
-     * @return число
+     * @return число int
      */
     public int scanInteger(String cheVvodit, boolean positiveOnly){
         while(true) {
@@ -102,11 +111,13 @@ public class InputHelper {
             }
         }
     }
+
     /**
      * метод для сканирования аргумента который должен быть float
-     * @param cheVvodit че вводить?
+     *
+     * @param cheVvodit    че вводить?
      * @param positiveOnly должно ли число быть только положительным?
-     * @return число
+     * @return число float
      */
     public float scanFloat(String cheVvodit, boolean positiveOnly){
         while(true) {
@@ -124,11 +135,13 @@ public class InputHelper {
             }
         }
     }
+
     /**
      * метод для сканирования аргумента который должен быть long
-     * @param cheVvodit че вводить?
+     *
+     * @param cheVvodit    че вводить?
      * @param positiveOnly должно ли число быть только положительным?
-     * @return число
+     * @return число long
      */
     public long scanLong(String cheVvodit, boolean positiveOnly){
         while(true) {
@@ -148,6 +161,12 @@ public class InputHelper {
     }
 
 
+    /**
+     * Scan local date time no null local date time.
+     *
+     * @param cheVvodit the che vvodit
+     * @return the local date time
+     */
     public LocalDateTime scanLocalDateTimeNoNull(String cheVvodit){
         System.out.println(cheVvodit);
         int god = scanInteger("год", true);
@@ -169,6 +188,13 @@ public class InputHelper {
             }
         }
     }
+
+    /**
+     * Scan location location.
+     *
+     * @param cheVvodit the che vvodit
+     * @return the location
+     */
     public Location scanLocation(String cheVvodit){
         System.out.println("введите " + cheVvodit);
         int x = scanInteger("координата Х места", false);
@@ -181,8 +207,9 @@ public class InputHelper {
     /**
      * сканирует всего дракона. проверяет правильность ввода полей. учитывает, какие поля
      * могут быть null, а какие поля-числа больше нуля
+     *
      * @param cheVvdoit че вводить?
-     * @return дракон
+     * @return дракон dragon
      */
     public Dragon scanDragon(String cheVvdoit){
         String name = scanStringArg("имя дракона");
@@ -202,8 +229,9 @@ public class InputHelper {
     /**
      * сканирует всего Person. проверяет правильность ввода полей. учитывает, какие поля
      * могут быть null, а какие поля-числа больше нуля
+     *
      * @param cheVvodit че вводить?
-     * @return человiк
+     * @return человiк person
      */
     public Person scanPerson(String cheVvodit){
         System.out.println("введите " + cheVvodit);

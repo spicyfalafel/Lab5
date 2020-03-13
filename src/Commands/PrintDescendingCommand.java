@@ -1,6 +1,14 @@
 package Commands;
 
+/**
+ * The type Print descending command.
+ */
 public class PrintDescendingCommand extends Command {
+    /**
+     * Instantiates a new Print descending command.
+     *
+     * @param receiver the receiver
+     */
     public PrintDescendingCommand(CommandReceiver receiver) {
         super(receiver);
     }

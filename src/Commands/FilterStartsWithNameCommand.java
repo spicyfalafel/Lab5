@@ -5,7 +5,15 @@ import Dragon.Dragon;
 import java.util.HashSet;
 import java.util.Iterator;
 
+/**
+ * The type Filter starts with name command.
+ */
 public class FilterStartsWithNameCommand extends Command {
+    /**
+     * Instantiates a new Filter starts with name command.
+     *
+     * @param receiver the receiver
+     */
     public FilterStartsWithNameCommand(CommandReceiver receiver) {
         super(receiver);
     }

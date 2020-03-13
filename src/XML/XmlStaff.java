@@ -16,8 +16,7 @@ public class XmlStaff {
     // мне кажется парсеры должны писаться не так...
 
     /**
-     * метод получения HashSet<Dragon> из xml файла
-     * использую библиотеку JDOM2
+     *
      * @param xmlFile файл который надо парсить
      * @return сет драконов
      * @throws FileNotFoundException если файл не нашелся

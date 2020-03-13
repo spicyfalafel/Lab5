@@ -1,7 +1,15 @@
 package Commands;
 
+/**
+ * The type Exit command.
+ */
 public class ExitCommand extends Command {
 
+    /**
+     * Instantiates a new Exit command.
+     *
+     * @param receiver the receiver
+     */
     public ExitCommand(CommandReceiver receiver) {
         super(receiver);
     }

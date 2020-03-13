@@ -6,7 +6,15 @@ import java.io.FileReader;
 import java.io.IOException;
 import Main.Main;
 
+/**
+ * The type Execute script command.
+ */
 public class ExecuteScriptCommand extends Command {
+    /**
+     * Instantiates a new Execute script command.
+     *
+     * @param receiver the receiver
+     */
     public ExecuteScriptCommand(CommandReceiver receiver) {
         super(receiver);
     }

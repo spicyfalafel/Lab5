@@ -4,7 +4,15 @@ import XML.XmlStaff;
 
 import java.io.FileNotFoundException;
 
+/**
+ * The type Save command.
+ */
 public class SaveCommand extends Command {
+    /**
+     * Instantiates a new Save command.
+     *
+     * @param receiver the receiver
+     */
     public SaveCommand(CommandReceiver receiver) {
         super(receiver);
     }

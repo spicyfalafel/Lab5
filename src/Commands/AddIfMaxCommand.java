@@ -2,7 +2,15 @@ package Commands;
 
 import java.util.Scanner;
 
+/**
+ * The type Add if max command.
+ */
 public class AddIfMaxCommand extends Command{
+    /**
+     * Instantiates a new Add if max command.
+     *
+     * @param receiver the receiver
+     */
     public AddIfMaxCommand(CommandReceiver receiver) {
         super(receiver);
     }

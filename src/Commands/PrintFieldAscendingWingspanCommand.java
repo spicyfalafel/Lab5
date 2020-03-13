@@ -1,6 +1,14 @@
 package Commands;
 
+/**
+ * The type Print field ascending wingspan command.
+ */
 public class PrintFieldAscendingWingspanCommand extends Command {
+    /**
+     * Instantiates a new Print field ascending wingspan command.
+     *
+     * @param receiver the receiver
+     */
     public PrintFieldAscendingWingspanCommand(CommandReceiver receiver) {
         super(receiver);
     }

@@ -4,7 +4,15 @@ import Dragon.Dragon;
 
 import java.util.Scanner;
 
+/**
+ * The type Remove lower element command.
+ */
 public class RemoveLowerElementCommand extends Command {
+    /**
+     * Instantiates a new Remove lower element command.
+     *
+     * @param receiver the receiver
+     */
     public RemoveLowerElementCommand(CommandReceiver receiver) {
         super(receiver);
     }

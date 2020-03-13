@@ -3,9 +3,17 @@ package Commands;
 import Dragon.*;
 import java.util.Scanner;
 
+/**
+ * The type Add element command.
+ */
 public class AddElementCommand extends Command {
     private Scanner sc = new Scanner(System.in);
 
+    /**
+     * Instantiates a new Add element command.
+     *
+     * @param receiver the receiver
+     */
     public AddElementCommand(CommandReceiver receiver) {
         super(receiver);
     }

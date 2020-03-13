@@ -3,7 +3,15 @@ package Commands;
 import Dragon.*;
 import java.util.Scanner;
 
+/**
+ * The type Update id command.
+ */
 public class UpdateIdCommand extends Command{
+    /**
+     * Instantiates a new Update id command.
+     *
+     * @param receiver the receiver
+     */
     public UpdateIdCommand(CommandReceiver receiver) {
         super(receiver);
     }

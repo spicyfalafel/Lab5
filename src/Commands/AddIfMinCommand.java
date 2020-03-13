@@ -2,7 +2,15 @@ package Commands;
 
 import java.util.Scanner;
 
+/**
+ * The type Add if min command.
+ */
 public class AddIfMinCommand extends Command {
+    /**
+     * Instantiates a new Add if min command.
+     *
+     * @param receiver the receiver
+     */
     public AddIfMinCommand(CommandReceiver receiver) {
         super(receiver);
     }

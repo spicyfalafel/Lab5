@@ -2,8 +2,16 @@ package Commands;
 
 import Dragon.MyDragonsCollection;
 
+/**
+ * The type Show command.
+ */
 public class ShowCommand extends Command {
 
+    /**
+     * Instantiates a new Show command.
+     *
+     * @param receiver the receiver
+     */
     public ShowCommand(CommandReceiver receiver) {
         super(receiver);
     }

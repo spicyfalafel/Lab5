@@ -3,6 +3,8 @@ package XML;
 import Dragon.*;
 import org.jdom2.Document;
 import org.jdom2.Element;
+import org.jdom2.JDOMException;
+import org.jdom2.input.JDOMParseException;
 import org.jdom2.input.SAXBuilder;
 import org.jdom2.output.Format;
 import org.jdom2.output.XMLOutputter;
@@ -21,7 +23,7 @@ public class XmlStaff {
      * @return сет драконов
      * @throws FileNotFoundException если файл не нашелся
      */
-    public static HashSet<Dragon> fromXmlToDragonList(File xmlFile) throws FileNotFoundException {
+    public static HashSet<Dragon> fromXmlToDragonList(File xmlFile) throws FileNotFoundException, JDOMParseException, JDOMException  {
         SAXBuilder builder = new SAXBuilder();
         BufferedReader reader = new BufferedReader(new FileReader(xmlFile));
         HashSet<Dragon> res = new HashSet<Dragon>();
@@ -62,9 +64,7 @@ public class XmlStaff {
                 res.add(new Dragon(name, coord, age, wingspan, type, character, killa));
                 reader.close();
             }
-        }catch(Exception e) {
-            System.out.println("введите в файл все правильно ");
-            e.printStackTrace();
+        }catch (IOException e){
         }
         return res;
     }

@@ -40,7 +40,7 @@ public class InputHelper {
      */
     private String scanNotEmptyLine(String cheVvodit){
         String res = scanLine(cheVvodit);
-        while(res.isBlank()) {
+        while(res.trim().isEmpty()) {
             System.out.println("Строка не должна быть пустой или состоять только из пробелов.");
             System.out.println("Введите " + cheVvodit + " заново.");
             res = sc.nextLine();

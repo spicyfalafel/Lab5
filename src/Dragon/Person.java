@@ -7,6 +7,7 @@ import Dragon.Location;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 
 public class Person {
     private String name; //Поле не может быть null, Строка не может быть пустой
@@ -45,8 +46,10 @@ public class Person {
 
     @Override
     public String toString() {
-        return name + " " + birthday.toString() + " " +
-                ((hairColor == null) ? "" : hairColor) +
-                ((nationality == null) ? " " : " " + nationality) + " " + location.toString();
+        DateTimeFormatter f = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        String birthday = f.format(this.birthday);
+        return name + ", birthday: " + birthday + ", haircolor: " +
+                ((hairColor == null) ? "null" : hairColor) + ", nationality: " +
+                ((nationality == null) ? " null" : " " + nationality) + ", location: " + location.toString();
     }
 }

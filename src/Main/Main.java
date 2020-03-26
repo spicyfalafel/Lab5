@@ -39,7 +39,7 @@ public class Main {
             System.out.println("файл не нашелся или нет прав на чтение.");
             drakoniNelegalnie = tryToGetFromDefaultFile();
         } catch (JDOMParseException e){
-            System.out.println("Данный файл не удалось распарсить, проверьте правильность ввода данных.");
+            System.out.println("Данный файл не удалось распарсить, проверьте правильность ввода данных, расширение файла.");
             drakoniNelegalnie = tryToGetFromDefaultFile();
         } catch (JDOMException e) {
             System.out.println("файл не получилось распарсить");

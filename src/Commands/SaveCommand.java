@@ -25,10 +25,11 @@ public class SaveCommand extends Command {
     @Override
     public void execute(String[] cmdArgs) {
         try{
+            System.out.println("введите файл (с расширением)");
             XmlStaff.writeCollectionToFile(receiver.getCollection().getDragons(), cmdArgs[0]);
             System.out.println("save done");
         }catch (FileNotFoundException e){
-            System.out.println("файл для сохранения не найден. как эта ошибка вылезти может я еще не знаю.");
+            System.out.println("файл для сохранения не найден. возможно препод убрал права на файл или директорию.");
         }
     }
 

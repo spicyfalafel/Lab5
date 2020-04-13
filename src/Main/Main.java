@@ -67,7 +67,7 @@ public class Main {
         invoker.register("filter_starts_with_name", new FilterStartsWithNameCommand(mainReceiver));
         invoker.register("add_if_max", new AddIfMaxCommand(mainReceiver));
         invoker.register("add_if_min", new AddIfMinCommand(mainReceiver));
-        invoker.register("remove_lower", new RemoveLowerElementCommand(mainReceiver));
+        invoker.register("remove_lower", new RemoveLowerThanElementCommand(mainReceiver));
         invoker.register("print_field_ascending_wingspan", new PrintFieldAscendingWingspanCommand(mainReceiver));
         invoker.register("print_descending", new PrintDescendingCommand(mainReceiver));
         invoker.register("save", new SaveCommand(mainReceiver));

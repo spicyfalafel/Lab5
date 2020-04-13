@@ -32,7 +32,7 @@ public class FilterStartsWithNameCommand extends Command {
                 System.out.println("Элементов в коллекции имена которых начинаются" +
                         "со строки " + cmdArgs[0] + ": " + res.size());
                 for (Dragon dragon : res) {
-                    System.out.println(dragon.getAllInfoColumn());
+                    System.out.println(dragon.toString());
                 }
             }else{
                 System.out.println("Драконов с именами начинающихся с " + cmdArgs[0] + " нет.");

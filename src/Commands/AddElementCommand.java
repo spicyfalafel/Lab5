@@ -28,7 +28,7 @@ public class AddElementCommand extends Command {
     @Override
     public void execute(String[] cmdArgs){
         InputHelper inputHelper = new InputHelper(sc);
-        Dragon dr = inputHelper.scanDragon("дракон");
+        Dragon dr = inputHelper.scanDragon();
         receiver.getCollection().add(dr);
         System.out.println("Дракон добавлен успешно!");
     }

@@ -219,7 +219,7 @@ public class InputHelper {
      * @param cheVvdoit че вводить?
      * @return дракон dragon
      */
-    public Dragon scanDragon(String cheVvdoit){
+    public Dragon scanDragon(){
         String name = scanStringArg("имя дракона");
         System.out.println("Координаты.");
         int x = scanInteger("Х", false);

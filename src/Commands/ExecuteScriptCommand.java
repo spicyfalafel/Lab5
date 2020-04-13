@@ -34,6 +34,7 @@ public class ExecuteScriptCommand extends Command {
     public void execute(String[] cmdArgs) {
         try(BufferedReader reader = new BufferedReader(new FileReader(cmdArgs[0]))){
             String line;
+            System.out.println("Запуск скрипта " + cmdArgs[0]);
             while((line = reader.readLine()) != null){
                 Main.executeCommand(line);
             }

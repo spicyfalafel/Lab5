@@ -29,18 +29,20 @@ public class UpdateIdCommand extends Command{
      */
     @Override
     public void execute(String[] cmdArgs) {
-        while(true){
-            try{
-                Scanner sc = new Scanner(System.in);
-                InputHelper inputHelper = new InputHelper(sc);
-                long id = Long.parseLong(cmdArgs[0].trim());
-                receiver.getCollection().removeById(id);
-                Dragon dr = inputHelper.scanDragon("дракон");
+        try{
+            Scanner sc = new Scanner(System.in);
+            InputHelper inputHelper = new InputHelper(sc);
+            long id = Long.parseLong(cmdArgs[0].trim());
+            if(receiver.getCollection().removeById(id)){
+                Dragon dr = inputHelper.scanDragon();
                 dr.changeId(id);
                 System.out.println("Дракон добавлен успешно!");
-            }catch (NumberFormatException e){
-                System.out.println("ID - это число");
+                receiver.getCollection().add(dr);
+            }else{
+                System.out.println("Дракона с id " + id + " в коллекции не нашлось.");
             }
+        }catch (NumberFormatException e){
+            System.out.println("ID - это число");
         }
     }
 

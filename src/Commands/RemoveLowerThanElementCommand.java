@@ -7,13 +7,13 @@ import java.util.Scanner;
 /**
  * The type Remove lower element command.
  */
-public class RemoveLowerElementCommand extends Command {
+public class RemoveLowerThanElementCommand extends Command {
     /**
      * Instantiates a new Remove lower element command.
      *
      * @param receiver the receiver
      */
-    public RemoveLowerElementCommand(CommandReceiver receiver) {
+    public RemoveLowerThanElementCommand(CommandReceiver receiver) {
         super(receiver);
     }
 
@@ -26,7 +26,7 @@ public class RemoveLowerElementCommand extends Command {
     public void execute(String[] cmdArgs) {
         Scanner sc = new Scanner(System.in);
         InputHelper helper = new InputHelper(sc);
-        Dragon dr = helper.scanDragon("дракона");
+        Dragon dr = helper.scanDragon();
         receiver.getCollection().removeLower(dr);
     }
 

@@ -30,7 +30,7 @@ public class AddIfMinCommand extends Command {
         InputHelper helper = new InputHelper(sc);
         receiver.getCollection().
                 addIfMin(helper.
-                        scanDragon("дракона которого надо добавить если он минимальный"));
+                        scanDragon());
     }
 
     @Override

@@ -215,16 +215,21 @@ public class Dragon implements Comparable<Dragon>{
         //this.id = (idInc-=-1);
     }
 
-    //мне не пришло в голову переопределить toString()
+    // небезопасно
 
     /**
-     * Get all info column string.
+     * костыль для команды updateById
      *
-     * @return колонку с информацией о драконе
+     * @param id id дракона
      */
-    public String getAllInfoColumn(){
+    public void changeId(long id){
+        this.id = id;
+    }
+
+    @Override
+    public String toString() {
         //если будет время можно рефлексией наверно
-        StringBuilder builder = new StringBuilder();
+                StringBuilder builder = new StringBuilder();
         builder.append("id: ").append(this.id).append("\n")
                 .append("name: ").append(this.name).append("\n")
                 .append("coordinates: ").append(coordinates.getX().toString())
@@ -239,30 +244,15 @@ public class Dragon implements Comparable<Dragon>{
         //быстрее ли через StringBuilder?
     }
 
-    // небезопасно
-
-    /**
-     * костыль для команды updateById
-     *
-     * @param id id дракона
-     */
-    public void changeId(long id){
-        this.id = id;
-    }
-
     /**
      * драконы сравниваются по value = age * wingspan
      * @param dragon сравниваемый дракон
      * @return
      */
 
+
     @Override
     public int compareTo(Dragon dragon) {
-        // не люблю плохих драконов
-        if(dragon.getCharacter().equals(DragonCharacter.EVIL)
-                && !(this.getCharacter().equals(DragonCharacter.EVIL))){
-            return 1;
-        }
         return Float.compare(getValue(), dragon.getValue());
     }
 }

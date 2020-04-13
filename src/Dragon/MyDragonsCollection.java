@@ -1,6 +1,7 @@
 package Dragon;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class MyDragonsCollection {
 
@@ -45,7 +46,7 @@ public class MyDragonsCollection {
         if(dragons.size() == 0) System.out.println("Коллекция пуста. Добавьте дракончиков.");
         for (Dragon d : dragons){
             System.out.println("----------");
-            System.out.println(d.getAllInfoColumn());
+            System.out.println(d.toString());
         }
     }
     public void clear(){
@@ -57,36 +58,40 @@ public class MyDragonsCollection {
     public void addIfMax(Dragon dragon){
         if(findMaxValue()<dragon.getValue()){
             add(dragon);
-            System.out.println("добавлен");
+            System.out.println("Дракон добавлен");
         }
     }
     public void addIfMin(Dragon dragon){
-        if(dragons.iterator().next().getValue()<dragon.getValue()){
+        if(dragons.stream().anyMatch(d -> (d.getValue()<dragon.getValue()))){
+            System.out.println("Не добавлен, т.к. не меньший");
+        }else{
             add(dragon);
-            System.out.println("добавлен");
+            System.out.println("Дракон добавлен");
         }
+    }
+
+    private ArrayList<Dragon> sorted(){
+        ArrayList<Dragon> dr = new ArrayList<>(dragons);
+        Collections.sort(dr);
+        return dr;
     }
 
     /**
      * удалить из коллекции все элементы, меньшие, чем заданный
      * @param dragon
      */
-    public void removeLower(Dragon dragon){
-        Iterator<Dragon> iterator = dragons.iterator();
-        while(iterator.hasNext()){
-            long id = dragon.getId();
-            if(id == iterator.next().getId()){
-                iterator.forEachRemaining(dragons::remove);
-            }
-        }
+    public void removeLower(Dragon dragon) {
+        dragons.stream().filter(d -> d.getValue() < dragon.getValue()).
+                forEach(dr -> {
+                    System.out.println("Удален дракон с id " + dr.getId());
+                    dragons.remove(dr);
+                });
     }
-
     /**
      * фильтрует коллекцию, оставляет только тех, чьи имена начинаются с name
      * @param name является началом имени драконов которых нужно получить
      * @return
      */
-
     public HashSet<Dragon> filterStartsWithName(String name){
         HashSet<Dragon> dr = new HashSet<>();
         for (Dragon d : dragons){
@@ -101,10 +106,9 @@ public class MyDragonsCollection {
      * простой метод для вывода коллекции в обратном порядке
      */
     public void printDescending(){
-        ArrayList<Dragon> dr = new ArrayList<>(dragons);
-        Collections.reverse(dr);
+        ArrayList<Dragon> dr = sorted();
         for(Dragon d : dr){
-            System.out.println(d.getAllInfoColumn());
+            System.out.println(d.toString());
         }
     }
     public boolean removeById(long id){
